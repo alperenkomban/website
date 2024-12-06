@@ -83,6 +83,11 @@
 			position: sticky;
 			top: 0;
 			z-index: 1000;
+			justify-content: center;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			padding: 1rem 0;
 		}
 
 		#nav .links a {
@@ -187,7 +192,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			padding: 4rem 8rem;
+			padding: 4rem 4rem;
 			background: #f8fafc;
 		}
 
@@ -203,6 +208,36 @@
 		#footer {
 			background: #f8fafc;
 		}
+
+		.icons.alt {
+			display: flex;
+			justify-content: center;
+			gap: 3rem;
+			margin: 2rem 0;
+		}
+
+		.icons.alt a {
+			font-size: 2.5rem;
+			color: var(--slate-blue);
+			transition: color 0.3s ease;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+		}
+
+		.icon-text {
+			font-size: 1.2rem;
+			margin-left: 0.5rem;
+		}
+
+		.icons.alt a:hover {
+			color: #64748b;
+		}
+
+		#contact {
+			margin-top: 6rem;
+			padding-top: 3rem;
+		}
 	</style>
 </head>
 
@@ -213,17 +248,17 @@
 		<!-- Intro -->
 		<div id="intro">
 			<h1>ALP KOMBAN</h1>
-			<p>CS Student @ Cornell University | ML Engineer @ Smartlens </p>
+			<p> ML Engineer @ Smartlens | CS Student @ Cornell University </p>
 		</div>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
 				<li><a href="#introduction">INTRODUCTION</a></li>
-				<li><a href="#education">EDUCATION</a></li>
 				<li><a href="#experience">EXPERIENCE</a></li>
-				<li><a href="#skills">SKILLS</a></li>
+				<li><a href="#education">EDUCATION</a></li>
 				<li><a href="#contact">CONTACT</a></li>
+				<li><a href="#footer">RESUME & LINKS</a></li>
 			</ul>
 		</nav>
 
@@ -242,49 +277,12 @@
 							to solve challenging real-world problems.</p>
 					</div>
 					<div class="image rounded">
-						<img src="images/pic01.jpg" alt="" />
+						<img src="images/IMG_2153.jpeg" width="100%" />
 					</div>
 				</div>
 			</section>
 
-			<section id="education" class="main">
-				<h2 class="section-title">EDUCATION</h2>
-				<div class="content-grid" style="align-items: start;">
-					<!-- Left side: Education details -->
-					<div class="education-details">
-						<div class="education-item" style="margin-bottom: 2rem;">
-							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Cornell University</h3>
-							<p style="color: var(--slate-blue); font-size: 1.1rem; margin: 0;">B.S. Computer Science, Minor in
-								ORIE</p>
-							<p style="color: var(--slate-blue); margin: 0;">2023 - 2025 | GPA: 3.9/4.0</p>
-						</div>
 
-						<div class="education-item" style="margin-bottom: 2rem;">
-							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Arizona State University
-							</h3>
-							<p style="color: var(--slate-blue); font-size: 1.1rem; margin: 0;">B.S. Computer Science, Minor in
-								Business</p>
-							<p style="color: var(--slate-blue); margin: 0;">2021 - 2023 | GPA: 4.0/4.0</p>
-						</div>
-
-						<div class="education-item">
-							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Henry M. Gunn High School
-							</h3>
-							<p style="color: var(--slate-blue); margin: 0;">2017 - 2021 | GPA: 3.9/4.0</p>
-						</div>
-					</div>
-
-					<!-- Right side: Logos -->
-					<div style="display: flex; flex-direction: column; gap: 4rem; justify-content: start; align-items: center;">
-						<img src="images/cornell.png" alt="Cornell University Logo"
-							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden;">
-						<img src="images/asu.png" alt="Arizona State University Logo"
-							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden;">
-						<img src="images/gunn.png" alt="Gunn High School Logo"
-							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden;">
-					</div>
-				</div>
-			</section>
 
 			<!-- Experience Section -->
 			<section id="experience" class="main">
@@ -297,11 +295,11 @@
 							<p style="color: var(--slate-blue); font-size: 1.1rem; margin: 0;">Machine Learning Intern & Engineer</p>
 							<p style="color: var(--slate-blue); margin: 0;">May, 2024 - Present | Mountain View, CA</p>
 							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
-								<li>Built neural network models to identify the optimal frame from video data, enhancing analysis
-									efficiency.</li>
-								<li>Developed segmentation algorithms to extract key components from selected frames.</li>
-								<li>Engineered features to develop a regressor that evaluates selected video frames.</li>
-								<li>Performed data analysis to validate model performance and identify improvement areas.</li>
+								I built multiple neural network models to analyze the smart contact lens,
+								identifying the optimal frame from video data with correct focus and alignment.
+								These frames are then analyzed using a segmentation algorithm I developed,
+								which extracts key components. Additionally, I engineered features to create
+								a regressor that evaluates their level with an accuracy of ±1.
 							</ul>
 						</div>
 
@@ -311,9 +309,13 @@
 							<p style="color: var(--slate-blue); font-size: 1.1rem; margin: 0;">Teacher Assistant & Grader</p>
 							<p style="color: var(--slate-blue); margin: 0;">Jan, 2023 - May 2023 | Tempe, AZ</p>
 							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
-								<li>Helped over 600 students master object-oriented programming and data structures.</li>
-								<li>Graded and provided feedback on assignments, focusing on improving their Java skills.</li>
-								<li>Worked closely with the lead instructor to deliver course content.</li>
+								I mentored over 600 students, facilitating their understanding of
+								object-oriented programming and data structures. My responsibilities
+								included conducting weekly study sessions, grading assignments for
+								200 students, and providing constructive feedback to enhance their
+								learning. I also collaborated with the lead instructor and contributed
+								to course delivery, which deepened my understanding and led to
+								several undergraduate research opportunities.
 							</ul>
 						</div>
 
@@ -323,9 +325,10 @@
 							<p style="color: var(--slate-blue); font-size: 1.1rem; margin: 0;">Marketing Intern</p>
 							<p style="color: var(--slate-blue); margin: 0;">Jun, 2019 - Sep, 2019 | Sunnyvale, CA</p>
 							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
-								<li>Gained hands-on experience in online marketing strategies for startup services.</li>
-								<li>Attended SBA workshops to deepen understanding of startup ecosystems.</li>
-								<li>Worked with teams to boost brand visibility through digital platforms.</li>
+								I gained hands-on experience in online marketing and collaborated with teams
+								to enhance brand visibility. I attended SBA workshops, deepening my
+								understanding of startup ecosystems, and observed various startups to
+								learn about their culture and business models.
 							</ul>
 						</div>
 					</div>
@@ -341,64 +344,169 @@
 							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;  margin: 0; overflow: hidden;">
 					</div>
 				</div>
-				<h3 class="section-title" style="font-size: 1.5rem; margin-top: 3rem;">PROJECTS AT WORK</h3>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-					<div class="image rounded">
-						<img src="images/pic05.jpg" alt="" />
+
+
+
+				<h3 class="section-title" style="font-size: 2rem; margin-top: 3rem;"> RECENT PROJECTS AT WORK</h3>
+				<div class="content-grid" style="align-items: start;">
+					<!-- Left side: Project details -->
+					<div class="project-details">
+						<div class="project-item" style="margin-bottom: 2rem;">
+							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Neural Network Framework
+							</h3>
+							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
+								I designed custom neural network architectures to analyze video
+								frames of contact lenses within the app, achieving 99% accuracy
+								in frame selection and component identification, streamlining
+								data preparation for doctors.
+							</ul>
+						</div>
 					</div>
-					<div class="rounded-container"
-						style="display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; padding-bottom: 56.25%; height: 0;">
-						<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-							src="https://www.youtube.com/embed/kbY0TZ6QJis" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen>
-						</iframe>
+					<!-- Right side: Media -->
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="image rounded">
+							<img src="images/NN.png" alt="Neural Network Diagram" style="width: 100%; height: auto;" />
+						</div>
 					</div>
-					<div class="image rounded">
-						<img src="images/pic06.jpg" alt="" />
+				</div>
+
+				<div class="content-grid" style="align-items: start; margin-top: 2rem;">
+					<div class="project-details">
+						<div class="project-item" style="margin-bottom: 2rem;">
+							<h3 style="color: var(--slate-blue); font-size: 1.25rem; margin-bottom: 0.5rem;"> Classification
+							</h3>
+							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
+								A classification model to determine if a frame is well-aligned, focused, and suitable for
+								analysis.
+							</ul>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="image rounded">
+							<img src="images/bestFrame_1241F2EE-9765-4C25-AA96-2807D7A42027.jpg" alt="Neural Network Diagram"
+								style="width: 100%; height: auto;" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="content-grid" style="align-items: start; margin-top: 2rem;">
+					<div class="project-details">
+						<div class="project-item" style="margin-bottom: 2rem;">
+							<h3 style="color: var(--slate-blue); font-size: 1.25rem; margin-bottom: 0.5rem;"> Segmentation
+							</h3>
+							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
+								A segmentation model to locate key components within frames and assess their alignment
+								accuracy.
+							</ul>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="rounded-container" style="width: 100%; position: relative; padding-bottom: 56.25%;">
+							<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+								src="https://www.youtube.com/embed/kbY0TZ6QJis" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-grid" style="align-items: start; margin-top: 2rem;">
+					<div class="project-details">
+						<div class="project-item" style="margin-bottom: 2rem;">
+							<h3 style="color: var(--slate-blue); font-size: 1.25rem; margin-bottom: 0.5rem;"> Regressor
+							</h3>
+							<ul style="color: var(--slate-blue); margin-top: 0.5rem; margin-bottom: 0;">
+								A regressor model to assess the contact lens level and determine the current eye pressure.
+							</ul>
+						</div>
+					</div>
+					<div style="display: grid; grid-template-rows: 1fr 1fr; gap: 1rem; max-width: 800px; margin: 0 auto;">
+						<div class="image rounded" style="aspect-ratio: 16/9;">
+							<img src="images/bestFrame_1241F2EE-9765-4C25-AA96-2807D7A42027 2.jpg"
+								style="width: 100%; height: 100%; object-fit: cover;" />
+						</div>
+						<div class="image rounded" style="aspect-ratio: 16/9;">
+							<img src="images/ss.jpeg" style="width: 100%; height: 100%; object-fit: cover;" />
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section id="skills" class="main">
-				<h2 class="section-title">SKILLS</h2>
-				<div class="skills-container">
-					<div class="skill-item">Programming Languages: C/C++, Python, Java, SQL, Go, JavaScript, Rust, OCaml</div>
-					<div class="skill-item">Frameworks & Libraries: PyTorch, TensorFlow, Keras, React, Gymnasium</div>
-					<div class="skill-item">Tools & Technologies: Linux, Git, Docker, Tableau</div>
-				</div>
-			</section>
+			<section id="education" class="main">
+				<h2 class="section-title">EDUCATION</h2>
+				<div class="content-grid" style="align-items: start;">
+					<!-- Left side: Education details -->
+					<div class="education-details">
+						<div class="education-item" style="margin-bottom: 2rem;">
+							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Cornell University</h3>
+							<p style="color: var(--slate-blue); font-size: 1.0rem; margin: 0;">B.S. Computer Science, Minor in
+								ORIE</p>
+							<p style="color: var(--slate-blue); margin: 0;">Ithaca, NY</p>
+							<p style="color: var(--slate-blue); margin: 0;">2023 - 2025 | GPA: 3.9/4.0</p>
+						</div>
 
+						<div class="education-item" style="margin-bottom: 2rem;">
+							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Arizona State University
+							</h3>
+							<p style="color: var(--slate-blue); font-size: 1.0rem; margin: 0;">B.S. Computer Science, Minor in
+								Business</p>
+							<p style="color: var(--slate-blue); margin: 0;">Tempe, AZ</p>
+							<p style="color: var(--slate-blue); margin: 0;">2021 - 2023 | GPA: 4.0/4.0</p>
+						</div>
 
+						<div class="education-item">
+							<h3 style="color: var(--slate-blue); font-size: 1.5rem; margin-bottom: 0.5rem;">Henry M. Gunn High
+								School
+							</h3>
+							<p style="color: var(--slate-blue); font-size: 1.0rem; margin: 0;"> </p>Activities: Business Club,
+							YearBook
+							<p style="color: var(--slate-blue); margin: 0;">Palo Alto, CA</p>
+							<p style="color: var(--slate-blue); margin: 0;">2017 - 2021 | GPA: 3.9/4.0</p>
+						</div>
+					</div>
 
-			<!-- Contact Section -->
-			<section id="contact" class="main">
-				<h2 class="section-title">CONTACT ME</h2>
-				<div class="contact-section">
-					<div class="contact-info skill-item">
-						<p><a href="mailto:alpkomban@gmail.com">alpkomban@gmail.com</a></p>
-						<p><a href="tel:+16509245514">+1 (650) 924-5514</a></p>
+					<!-- Right side: Logos -->
+					<div style="display: flex; flex-direction: column; gap: 4rem; justify-content: start; align-items: center;">
+						<img src="images/cornell.png" alt="Cornell University Logo"
+							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden;">
+						<img src="images/asu.png" alt="Arizona State University Logo"
+							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden;">
+						<img src="images/gunn.png" alt="Gunn High School Logo"
+							style="min-width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden;">
 					</div>
 				</div>
-			</section>
 
-			<!-- Footer -->
-			<section class="split contact" style="background: #f8fafc;">
-				<section
-					style="display: flex; flex-direction: column; justify-content: start; align-items: center; background: #f8fafc; ">
 
-					<ul class="icons alt" , style="background: #f8fafc;">
-						<li><a href="https://www.linkedin.com/in/alpkomban" class="icon brands alt fa-linkedin"
-								target="_blank"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/alperenkomban" class="icon brands alt fa-github" target="_blank"><span
-									class="label">GitHub</span></a></li>
-						<li><a href="files/alpkomban_resume.pdf" class="icon alt fa-file-pdf" download target="_blank"><span
-									class="label">Resume</span></a></li>
-					</ul>
-
+				<!-- Contact Section -->
+				<section id="contact" class="main">
+					<h2 class="section-title">CONTACT ME</h2>
+					<div class="contact-section">
+						<div class="contact-info skill-item">
+							<p><a href="mailto:alpkomban@gmail.com">alpkomban@gmail.com</a></p>
+							<p><a href="tel:+16509245514">+1 (650) 924-5514</a></p>
+						</div>
+					</div>
 				</section>
-			</section>
 		</div>
+
+		<!-- Footer -->
+		<section id="footer" class="split contact">
+			<section
+				style="display: flex; flex-direction: column; justify-content: start; align-items: center; background: #f8fafc;">
+				<ul class="icons alt">
+					<li><a href="files/alpkomban_resume.pdf" class="icon alt fa-file-pdf" download target="_blank">
+							<span class="icon-text">Resume</span></a></li>
+					<li><a href="https://www.linkedin.com/in/alpkomban" class="icon brands alt fa-linkedin" target="_blank">
+							<span class="icon-text">LinkedIn</span></a></li>
+					<li><a href="https://github.com/alperenkomban" class="icon brands alt fa-github" target="_blank">
+							<span class="icon-text">GitHub</span></a></li>
+				</ul>
+			</section>
+		</section>
+
+
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>

@@ -4881,7 +4881,7 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 	background-color: #475569;
 	padding: 1rem 2rem;
 	border-radius: 9999px;
-	color: white;
+	color: f8fafc;
 	text-align: center;
 }
 
